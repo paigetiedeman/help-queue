@@ -8,8 +8,9 @@ function TicketDetail(props) {
     <h1>Ticket Detail</h1>
     <h3>{ticket.location} - {ticket.names}</h3>
     <p><em>{ticket.issue}</em></p>
-    <button onClick={ props.onClickingEdit }>Update Ticket</button> 
-    <button onClick={()=> props.onClickingDelete(ticket.id) }>Close Ticket</button>
+    <p><em>{ticket.formattedWaitTime}</em></p>
+    <button onClick={ props.onClickingEdit } className='btn btn-dark'>Update Ticket</button> 
+    <button onClick={()=> props.onClickingDelete(ticket.id) } className='btn btn-dark'>Close Ticket</button>
     <hr />
     </>
   );
