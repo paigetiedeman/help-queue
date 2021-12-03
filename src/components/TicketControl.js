@@ -14,7 +14,6 @@ class TicketControl extends React.Component {
     super(props);
     console.log(props);
     this.state = {
-      // formVisibleOnPage: false,
       selectedTicket: null,
       editing: false
     };
