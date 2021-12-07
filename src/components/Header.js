@@ -5,14 +5,12 @@ function Header(){
   return (
     <React.Fragment>
     <h1> Help Queue</h1>
-    <ul>
-      <li>
+      <button>
         <Link to="/">Home</Link>
-      </li>
-      <li>
+      </button>
+      <button>
         <Link to="/signin">Sign In</Link>
-      </li>
-    </ul>
+      </button>
   </React.Fragment>
   );
 }

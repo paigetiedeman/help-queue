@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App(){
   return ( 
-    <div className="container">
     <Router>
+      <div className="container">
       <Header />
       <Switch>
         <Route path="/signin">
@@ -17,8 +17,8 @@ function App(){
           <TicketControl />
         </Route>
       </Switch>
-    </Router>
     </div>
+    </Router>
   );
 }
 
