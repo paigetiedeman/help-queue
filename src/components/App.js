@@ -3,12 +3,13 @@ import Header from "./Header";
 import TicketControl from "./TicketControl";
 import Signin from "./Signin";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import './App.css'
 
 function App(){
   return ( 
     <Router>
-      <div className="container">
       <Header />
+      <div className="container">
       <Switch>
         <Route path="/signin">
           <Signin />

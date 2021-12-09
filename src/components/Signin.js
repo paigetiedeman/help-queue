@@ -69,6 +69,7 @@ function Signin() {
         <br />
       <button type='submit' className="btn btn-dark">Sign In</button>
     </form>
+    <br />
       <button onClick={doSignOut} className="btn btn-dark">Sign out</button>
     <br />
   </React.Fragment>
