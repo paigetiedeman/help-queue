@@ -23,6 +23,7 @@ function TicketList(props){
             location={ticket.location}
             issue={ticket.issue}
             formattedWaitTime={ticket.formattedWaitTime}
+            timeOpen={ticket.timeOpen}
             id={ticket.id}
             key={ticket.id}/>
         })}

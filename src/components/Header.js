@@ -5,10 +5,10 @@ function Header(){
   return (
     <React.Fragment>
     <h1> Help Queue</h1>
-      <button>
+      <button className="btn btn-dark">
         <Link to="/">Home</Link>
       </button>
-      <button>
+      <button className="btn btn-dark">
         <Link to="/signin">Sign In</Link>
       </button>
   </React.Fragment>

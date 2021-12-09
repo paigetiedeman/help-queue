@@ -6,7 +6,8 @@ import EditTicketForm from './EditTicketForm';
 import { connect } from 'react-redux';
 import PropTypes from "prop-types";
 import * as a from './../actions';
-import { withFirestore, isLoaded } from 'react-redux-firebase'
+import { withFirestore, isLoaded } from 'react-redux-firebase';
+import { getAuth } from "firebase/auth";
 
 class TicketControl extends React.Component {
 
@@ -39,7 +40,7 @@ class TicketControl extends React.Component {
     });
   }
   
-  handleAddingNewTicketToList = (newTicket) => {
+  handleAddingNewTicketToList = () => {
     const { dispatch } = this.props;
     const action = a.toggleForm();
     dispatch(action);
@@ -64,6 +65,7 @@ class TicketControl extends React.Component {
         names: ticket.get("names"),
         location: ticket.get("location"),
         issue: ticket.get("issue"),
+        timeOpen: ticket.get("timeOpen"),
         id: ticket.id
       }
       this.setState({selectedTicket: firestoreTicket });
@@ -87,7 +89,9 @@ class TicketControl extends React.Component {
     }
 
   render(){
-    const auth = this.props.firebase.auth();
+
+  const auth = getAuth();
+
   if (!isLoaded(auth)) {
     return (
       <React.Fragment>

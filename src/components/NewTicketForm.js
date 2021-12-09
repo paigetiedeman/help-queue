@@ -16,7 +16,6 @@ function NewTicketForm(props){
       location: event.target.location.value, 
       issue: event.target.issue.value,
       timeOpen: firestore.FieldValue.serverTimestamp()
-      
     });
   }
 

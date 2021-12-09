@@ -15,7 +15,8 @@ function EditTicketForm(props){
     const propertiesToUpdate = {
       names: event.target.names.value,
       location: event.target.location.value,
-      issue: event.target.issue.value
+      issue: event.target.issue.value,
+      timeOpen: event.target.timeOpen.value
     }
     return firestore.update({collection: 'tickets', doc: ticket.id }, propertiesToUpdate)
   }

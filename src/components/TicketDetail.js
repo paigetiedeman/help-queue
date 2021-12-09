@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function TicketDetail(props) {
-  const {ticket} = props;
+  const { ticket } = props;
   return (
     <>
     <h1>Ticket Detail</h1>
